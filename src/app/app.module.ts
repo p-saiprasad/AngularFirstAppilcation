@@ -5,10 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { HeaderComponent } from './Netflix/header.component';
+import { FooterComponent } from './Netflix/footer/footer.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, HelloComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    HeaderComponent,
+    FooterComponent,
+  ],
   bootstrap: [HeaderComponent],
 })
 export class AppModule {}
