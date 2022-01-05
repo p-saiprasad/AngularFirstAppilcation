@@ -5,16 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { HeaderComponent } from './Netflix/header.component';
-import { FooterComponent } from './Netflix/footer/footer.component';
-
+import { JokeListComponent } from './joke-list/joke-list.component';
 @NgModule({
   imports: [BrowserModule, FormsModule],
   declarations: [
     AppComponent,
     HelloComponent,
     HeaderComponent,
-    FooterComponent,
+    JokeListComponent,
   ],
-  bootstrap: [HeaderComponent],
+  bootstrap: [JokeListComponent],
 })
 export class AppModule {}
