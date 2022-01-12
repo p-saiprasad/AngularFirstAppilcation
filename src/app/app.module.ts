@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { HeaderComponent } from './Netflix/header.component';
 import { JokeListComponent } from './joke-list/joke-list.component';
+import { TemplateRefComponent } from './template-ref/template-ref.component';
+import { PuppyListComponent } from './puppy-list/puppy-list.component';
+import { PuppiesComponent } from './puppies/puppies.component';
+
 @NgModule({
   imports: [BrowserModule, FormsModule],
   declarations: [
@@ -13,7 +17,10 @@ import { JokeListComponent } from './joke-list/joke-list.component';
     HelloComponent,
     HeaderComponent,
     JokeListComponent,
+    TemplateRefComponent,
+    PuppyListComponent,
+    PuppiesComponent,
   ],
-  bootstrap: [JokeListComponent],
+  bootstrap: [PuppiesComponent],
 })
 export class AppModule {}

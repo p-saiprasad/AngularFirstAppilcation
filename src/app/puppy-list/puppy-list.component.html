@@ -1,0 +1,10 @@
+<div>
+  <li *ngFor="let puppy of puppies">
+    <img [src]="puppy.photo" alt="..." />
+    <h3>{{ puppy.name }}</h3>
+    <p>
+      <span>Age: {{ puppy.age }} </span>
+      <span>Breed: {{ puppy.breed }} </span>
+    </p>
+  </li>
+</div>
