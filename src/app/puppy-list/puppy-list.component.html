@@ -8,3 +8,10 @@
     </p>
   </li>
 </div>
+<h2>changes</h2>
+<li *ngFor="let chng of changeLog">
+  <h3>previousValue: {{ chng.previousValue }}</h3>
+  <p>
+    <span>current value: {{ chng.currentValue }} </span>
+  </p>
+</li>
