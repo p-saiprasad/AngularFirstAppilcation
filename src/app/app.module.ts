@@ -9,6 +9,7 @@ import { TemplateRefComponent } from './template-ref/template-ref.component';
 import { PuppyListComponent } from './puppy-list/puppy-list.component';
 import { PuppiesComponent } from './puppies/puppies.component';
 import { PeekABooParentComponent } from './peek-aboo-parent/peek-aboo-parent.component';
+import { PeekABooComponent } from './peek-a-boo/peek-a-boo.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -21,6 +22,7 @@ import { PeekABooParentComponent } from './peek-aboo-parent/peek-aboo-parent.com
     PuppyListComponent,
     PuppiesComponent,
     PeekABooParentComponent,
+    PeekABooComponent,
   ],
   bootstrap: [PeekABooParentComponent],
 })

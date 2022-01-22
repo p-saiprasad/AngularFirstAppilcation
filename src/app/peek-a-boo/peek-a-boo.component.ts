@@ -3,7 +3,6 @@ import {
   AfterContentInit,
   AfterViewChecked,
   AfterViewInit,
-  Directive,
   DoCheck,
   OnChanges,
   OnDestroy,
@@ -39,8 +38,9 @@ export class PeekABooComponent
     super(logger);
     this.logIt(`constructorOfComponent`);
     let is = this.name ? 'is' : 'is not';
-    this.logIt(`name ${is} known at construction`);}
-    // only called for/if there is an @input variable set by parent.
+    this.logIt(`name ${is} known at construction`);
+  }
+  // only called for/if there is an @input variable set by parent.
   ngOnChanges(changes: SimpleChanges) {
     let changesMsgs: string[] = [];
     for (let propName in changes) {
@@ -57,24 +57,35 @@ export class PeekABooComponent
 
   // Beware! Called frequently!
   // Called in every change detection cycle anywhere on the page
-  ngDoCheck() { this.logIt(`DoCheck`); }
-
-  ngAfterContentInit() { this.logIt(`AfterContentInit`);  }
-
-  // Beware! Called frequently!
-  // Called in every change detection cycle anywhere on the page
-  ngAfterContentChecked() { this.logIt(`AfterContentChecked`); }
-
-  ngAfterViewInit() { this.logIt(`AfterViewInit`); }
-
-  // Beware! Called frequently!
-  // Called in every change detection cycle anywhere on the page
-  ngAfterViewChecked() { this.logIt(`AfterViewChecked`); }
-
-  ngOnDestroy() { this.logIt(`OnDestroy`); }
+  ngDoCheck() {
+    this.logIt(`DoCheck`);
   }
 
+  ngAfterContentInit() {
+    this.logIt(`AfterContentInit`);
+  }
 
-function changes(changes: any,SimpleChanges: any) {
-throw new Error('Function not implemented.');
+  // Beware! Called frequently!
+  // Called in every change detection cycle anywhere on the page
+  ngAfterContentChecked() {
+    this.logIt(`AfterContentChecked`);
+  }
+
+  ngAfterViewInit() {
+    this.logIt(`AfterViewInit`);
+  }
+
+  // Beware! Called frequently!
+  // Called in every change detection cycle anywhere on the page
+  ngAfterViewChecked() {
+    this.logIt(`AfterViewChecked`);
+  }
+
+  ngOnDestroy() {
+    this.logIt(`OnDestroy`);
+  }
+}
+
+function changes(changes: any, SimpleChanges: any) {
+  throw new Error('Function not implemented.');
 }
